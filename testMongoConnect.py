@@ -2,7 +2,7 @@ from pyspark.sql import SparkSession
 
 spark = SparkSession.builder \
     .appName("MongoDBConnectionTest") \
-    .config("spark.mongodb.input.uri", "mongodb://10.166.128.67:27017/nibrs.incident") \
+    .config("spark.mongodb.input.uri", "mongodb://<HOST>:<PORT>/<DB>.<COLLECTION>") \
     .getOrCreate()
 
 try:

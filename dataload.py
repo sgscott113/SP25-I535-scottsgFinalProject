@@ -53,7 +53,7 @@ files_to_load = [
 ]
 
 # Connect to PostgreSQL
-conn = psycopg2.connect("dbname=nibrs user=completely-epic-seahorse password=g%_9LeR%U|NlZo@7 host=10.12.0.3")
+conn = psycopg2.connect("dbname=<DBNAME> user=<USERNAME> password=<PASSWORD> host=<HOST>")
 cur = conn.cursor()
 
 # Loop through each file and load data

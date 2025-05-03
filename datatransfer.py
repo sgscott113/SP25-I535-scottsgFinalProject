@@ -3,7 +3,7 @@ import psycopg2
 from pymongo import MongoClient
 
 # Connect to PostgreSQL
-conn = psycopg2.connect("dbname=nibrs user=completely-epic-seahorse password=O!6LHcsgjVq63Zdl host=10.12.0.3")
+conn = psycopg2.connect("dbname=<DBNAME> user=<USERNAME> password=<PASSWORD> host=<HOST>")
 cur = conn.cursor()
 
 # Query to gather incident summary
@@ -49,9 +49,9 @@ GROUP BY
 cur.execute(query)
 
 # MongoDB connection details
-mongo_uri = "35.239.165.45:27017"
-mongo_database = "nibrs"
-mongo_collection = "incident"
+mongo_uri = "<HOST>:<PORT>"
+mongo_database = "<DBNAME>"
+mongo_collection = "<COLLECTION>"
 
 client = MongoClient(mongo_uri)
 db = client[mongo_database]
